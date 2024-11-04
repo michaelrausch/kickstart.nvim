@@ -89,7 +89,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
+vim.keymap.set('n', '<leader>pv', '<CMD>Oil<CR>', { desc = 'open oil' })
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
@@ -608,7 +608,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -618,7 +618,7 @@ require('lazy').setup({
         -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
         --
-
+        -- python = {}
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
